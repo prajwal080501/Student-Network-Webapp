@@ -8,7 +8,7 @@ const Feed = ({ modal, handleModal }) => {
         window.location.reload()
     }
     return (
-        <div className="bg-black/40 rounded-lg mx-2 lg:mx-5 w-full lg:w-[70%] h-fit">
+        <div className="bg-black/40 rounded-lg lg:mx-5 w-full lg:w-[70%] h-fit">
             <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}

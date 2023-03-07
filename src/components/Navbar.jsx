@@ -31,7 +31,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex-1 flex items-center space-x-10 justify-center sm:items-stretch sm:justify-start">
                         <Link to="/" className="flex-shrink-0 flex items-center">
-                            <p className="text-3xl font-extrabold text-white">
+                            <p className="text-2xl lg:text-3xl font-extrabold text-white">
                                 Campus<span className="text-blue-500">Crowd</span>
                             </p>
                         </Link>
@@ -46,21 +46,13 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <button type="button" className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                            <span className="sr-only">View notifications</span>
-                            {/* Heroicon name: outline/bell */}
-                            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m-8-4h8m-8-4h8M6 9v1a5 5 0 005 5h.
-
-                            5a5 5 0 005-5V9a7 7 0 00-14 0z" />
-                            </svg>
-                        </button>
+                    
                         {/* Profile dropdown */}
                         <div className="ml-3 relative">
                             <div>
                                 <button type="button" className="bg-gray-800 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-expanded="false" aria-haspopup="true">
                                     <span className="sr-only">Open user menu</span>
-                                    <img onClick={handleDropdown} className="h-8 w-8 rounded-full" src="" alt />
+                                    <img onClick={handleDropdown} className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt />
                                 </button>
                             </div>
                             <div className={
