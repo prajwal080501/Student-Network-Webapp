@@ -7,6 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
 @layer components {
     .input {
         @apply w-[80%] h-[50px] rounded-md dark:bg-black/20 dark:text-white mb-5 px-5 outline-none focus:border-2 focus:border-blue-500 duration-200 ease-out

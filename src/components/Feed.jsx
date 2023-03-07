@@ -2,6 +2,8 @@ import React from 'react'
 import { AiOutlinePlusCircle, AiOutlineReload } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import PostCard from './PostCard'
+import { Posts } from '../data'
+
 const Feed = ({ modal, handleModal }) => {
 
     const refresh = () => {
@@ -25,9 +27,11 @@ const Feed = ({ modal, handleModal }) => {
                 </button>
             </motion.div>
             <div className="flex flex-col pb-5 space-y-5 w-[95%] mx-auto mt-5">
-                <PostCard />
-                <PostCard />
-                <PostCard />
+                {
+                    Posts.map(post => (
+                        <PostCard key={post.id} post={post} />
+                    ))
+                }
             </div>
         </div>
     )

@@ -46,7 +46,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    
+
                         {/* Profile dropdown */}
                         <div className="ml-3 relative">
                             <div>
@@ -67,7 +67,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Mobile menu, show/hide based on menu state. */}
-            
+
         </nav>
     )
 }
