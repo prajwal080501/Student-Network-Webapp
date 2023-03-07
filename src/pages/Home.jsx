@@ -1,8 +1,17 @@
 import React from 'react'
+import Feed from '../components/Feed'
+import Modal from '../components/Modal'
+import Suggestions from '../components/Suggestions'
 
-const Home = () => {
+const Home = ({modal, handleModal}) => {
     return (
-        <div className="text-white">Home</div>
+        <div className="w-full h-full">
+            <div className="flex pt-5">
+                <Feed modal={modal} handleModal={handleModal} />
+                <Suggestions />
+                <Modal modal={modal} handleModal={handleModal} />
+            </div>
+        </div>
     )
 }
 
