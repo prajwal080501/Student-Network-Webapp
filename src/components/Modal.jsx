@@ -14,7 +14,7 @@ const Modal = ({ modal, handleModal }) => {
                 modal ? "fixed z-10 inset-0 overflow-y-auto" : "hidden"
             } aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <div className="fixed inset-0 bg-black/80 bg-opacity-75 backdrop-blur-xl duration-200 ease-in transition-opacity" aria-hidden="true"></div>
+                <div onClick={handleModal} className="fixed inset-0 bg-black/80 bg-opacity-75 backdrop-blur-xl duration-200 ease-in transition-opacity" aria-hidden="true"></div>
                 <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
                 <motion.div
                     initial={{ y: -500 }}

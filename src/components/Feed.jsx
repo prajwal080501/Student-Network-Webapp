@@ -24,7 +24,7 @@ const Feed = ({ modal, handleModal }) => {
                     <AiOutlineReload className="text-3xl" />
                 </button>
             </motion.div>
-            <div className="flex flex-col space-y-5 w-[95%] mx-auto mt-5">
+            <div className="flex flex-col pb-5 space-y-5 w-[95%] mx-auto mt-5">
                 <PostCard />
                 <PostCard />
                 <PostCard />
