@@ -17,8 +17,8 @@ const Feed = ({ modal, handleModal }) => {
                 exit={{ y: -100, opacity: 0 }}
                 transition={{ duration: 1 }}
                 className="flex sticky top-20 rounded-lg mx-auto mt-5  w-fit items-center">
-                    {/* add a blur div at background of this div */}
-                    <div className="absolute top-0 left-0 w-full h-full bg-black/40 backdrop-filter backdrop-blur-lg -z-10 rounded-lg"></div>
+                {/* add a blur div at background of this div */}
+                <div className="absolute top-0 left-0 w-full h-full bg-black/40 backdrop-filter backdrop-blur-lg -z-10 rounded-lg"></div>
                 <button onClick={handleModal} title="New Post" className="p-3 mx-3 rounded-full my-3 bg-gradient-to-r from-blue-500 to-fuchsia-600 hover:scale-110 duration-200 active:scale-95 text-3xl font-bold dark:text-white">
                     <AiOutlinePlusCircle className="text-3xl" />
                 </button>

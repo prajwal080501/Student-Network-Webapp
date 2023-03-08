@@ -31,23 +31,19 @@ const Navbar = () => {
                     </div>
                     <div className="flex-1 flex items-center space-x-10 justify-center sm:items-stretch sm:justify-start">
                         <Link to="/" className="flex-shrink-0 flex items-center">
-                            <p className="text-2xl lg:text-3xl font-extrabold text-white">
+                            <p className="text-2xl lg:text-3xl font-bold text-white">
                                 Campus<span className="text-blue-500">Crowd</span>
                             </p>
                         </Link>
-                        <div className="hidden sm:block sm:ml-6">
-                            <div className="flex space-x-4">
-                                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                                <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
-                                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Jobs</a>
-                                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                        <div className="hidden sm:block sm:ml-6 w-[80%] rounded-lg bg-zinc-900 outline-none ring-1 focus:ring-blue-500 transition-all duration-200 ease-out ">
+                            {/* search box */}
+                            <div className="flex  w-full ">
+                                <input type="text" className=" bg-transparent w-full px-5 py-2 text-white font-extrabold text-xl outline-none" placeholder="Search" />
                             </div>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-                        {/* Profile dropdown */}
                         <div className="ml-3 relative">
                             <div>
                                 <div to="/profile" type="button" className="bg-gray-800 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-expanded="false" aria-haspopup="true">
@@ -66,8 +62,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            {/* Mobile menu, show/hide based on menu state. */}
-
         </nav>
     )
 }
