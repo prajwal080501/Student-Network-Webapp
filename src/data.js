@@ -32,3 +32,51 @@ export const Posts = [
         username: 'Shyam Doe'
     }
 ]
+
+export const Skills = [
+    {
+        id: 1,
+        name: 'HTML',
+        img: 'https://img.icons8.com/color/48/000000/html-5--v1.png'
+    },
+    {
+        id: 2,
+        name: 'CSS',
+        img: 'https://img.icons8.com/color/48/000000/css3.png'
+    },
+    {
+        id: 3,
+        name: 'JavaScript',
+        img: 'https://img.icons8.com/color/48/000000/javascript--v1.png'
+    },
+    {
+        id: 4,
+        name: 'React',
+        img: 'https://img.icons8.com/color/48/000000/react-native.png'
+    },
+    {
+        id: 5,
+        name: 'Node',
+        img: 'https://img.icons8.com/color/48/000000/nodejs.png'
+    },
+    {
+        id: 6,
+        name: 'MongoDB',
+        img: 'https://img.icons8.com/color/48/000000/mongodb.png'
+    },
+    {
+        id: 7,
+        name: 'Express',
+        img: 'https://img.icons8.com/color/48/000000/express.png'
+    },
+    {
+        id: 8,
+        name: 'Python',
+        img: 'https://img.icons8.com/color/48/000000/python--v1.png'
+    },
+    {
+        id: 9,
+        name: 'Django',
+        img: 'https://img.icons8.com/color/48/000000/django.png'
+    }
+]

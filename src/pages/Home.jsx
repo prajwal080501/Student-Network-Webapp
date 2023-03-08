@@ -1,6 +1,7 @@
 import React from 'react'
 import Feed from '../components/Feed'
 import Modal from '../components/Modal'
+import ProfileBox from '../components/ProfileBox'
 import Suggestions from '../components/Suggestions'
 
 const Home = ({modal, handleModal}) => {
@@ -8,7 +9,7 @@ const Home = ({modal, handleModal}) => {
         <div className="w-full h-full">
             <div className="flex pt-5">
                 <Feed modal={modal} handleModal={handleModal} />
-                <Suggestions />
+                    <Suggestions />
                 <Modal modal={modal} handleModal={handleModal} />
             </div>
         </div>

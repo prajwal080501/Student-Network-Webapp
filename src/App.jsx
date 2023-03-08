@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
+import Profile from './pages/Profile';
 import Register from './pages/Register';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home modal={modal} handleModal={handleModal}/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

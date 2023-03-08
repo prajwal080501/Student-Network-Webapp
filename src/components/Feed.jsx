@@ -10,7 +10,7 @@ const Feed = ({ modal, handleModal }) => {
         window.location.reload()
     }
     return (
-        <div className="bg-black/40 rounded-lg lg:mx-5 w-full lg:w-[70%] h-fit">
+        <div className="bg-black/40 rounded-lg lg:mx-5 w-full lg:w-[90%] h-fit">
             <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -23,7 +23,7 @@ const Feed = ({ modal, handleModal }) => {
                     <AiOutlinePlusCircle className="text-3xl" />
                 </button>
                 <button onClick={refresh} title="Refresh" className="p-3 mx-3 rounded-full my-3 bg-green-500 hover:scale-110 duration-200 active:scale-95 text-3xl font-bold dark:text-white">
-                    <AiOutlineReload className="text-3xl" />
+                    <AiOutlineReload className="text-3xl hover:animate-spin ease-linear duration-200" />
                 </button>
             </motion.div>
             <div className="flex flex-col pb-5 space-y-5 w-[95%] mx-auto mt-5">

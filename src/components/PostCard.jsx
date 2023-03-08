@@ -1,17 +1,20 @@
 import React from 'react'
 import {AiOutlineLike, AiOutlineComment} from 'react-icons/ai'
 import {FiShare} from "react-icons/fi"
+import { Link } from 'react-router-dom'
 
 const PostCard = ({post}) => {
     return (
         //  post card using tailwind css
         <div className="bg-black/80 lg:w-[80%] mx-auto p-2 lg:p-4 rounded-lg">
             <div className="flex items-center">
+                <Link to="/profile" className="flex items-center">
                 <img src="https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="profile" className="w-10 h-10 rounded-full" />
                 <div className="ml-3">
                     <h1 className="text-white text-lg font-semibold">{post.username}</h1>
                     <p className="text-gray-400 text-sm">2 Hours ago</p>
                 </div>
+                </Link>
 
                 <div className="ml-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
