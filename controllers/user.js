@@ -107,7 +107,7 @@ export const deleteUser = async (req, res) => {
     const { id } = req.params;
     try {
         // check if user id and passed id match
-       if (req.body.userId === id || req.body.isAdmin) {
+        if (req.body.userId === id || req.body.isAdmin) {
             await User.findByIdAndDelete(id);
             res.status(200).json({
                 code: 200,
@@ -129,5 +129,40 @@ export const deleteUser = async (req, res) => {
             message: error.message,
             data: null
         })
+    }
+}
+
+export const updateUser = async (req, res) => {
+    const { id } = req.params;
+    const user = await User.findById(id);
+    if (req.body.userId === id || req.body.isAdmin) {
+        if (req.body.password) {
+            try {
+                const salt = await bcrypt.genSalt(10);
+                req.body.password = await bcrypt.hash(req.body.password, salt);
+            } catch (error) {
+                res.status(500).json({
+                    code: 500,
+                    message: error.message,
+                    data: null
+                })
+            }
+        }
+        try {
+            const updatedUser = await User.findByIdAndUpdate(id, {
+                $set: req.body
+            }, { new: true })
+            res.status(200).json({
+                code: 200,
+                message: "Account has been updated",
+                data: updatedUser
+            })
+        } catch (error) {
+            res.status(500).json({
+                code: 500,
+                message: error.message,
+                data: null
+            })
+        }
     }
 }

@@ -26,8 +26,8 @@ export const createPost = async (req, res) => {
 }
 export const getFeedPosts = async (req, res) => {
     // get posts only for the person who is logged in and followed by user
-    const { userId } = req.body;
-    const user = await User.findById(userId);
+    const { id } = req.params;
+    const user = await User.findById(id);
     const posts = await Post.find({
         userId: {
             $in: user.followings
