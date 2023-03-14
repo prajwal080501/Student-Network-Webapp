@@ -8,11 +8,13 @@ const PostCard = ({post}) => {
         //  post card using tailwind css
         <div className="bg-black/80 lg:w-[80%] mx-auto p-2 lg:p-4 rounded-lg">
             <div className="flex items-center">
-                <Link to="/profile" className="flex items-center">
-                <img src="https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="profile" className="w-10 h-10 rounded-full" />
+                <Link to={`/profile/${post.userId}`}className="flex items-center">
+                <img src={post.profilePicture} alt="profile" className="w-10 h-10 rounded-full" />
                 <div className="ml-3">
                     <h1 className="text-white text-lg font-semibold">{post.username}</h1>
-                    <p className="text-gray-400 text-sm">2 Hours ago</p>
+                    <p className="text-gray-400 text-sm">{
+                        post.createdAt && new Date(post.createdAt).toDateString()
+                    }</p>
                 </div>
                 </Link>
 
@@ -23,8 +25,10 @@ const PostCard = ({post}) => {
                 </div>
             </div>
             <div className="mt-3 bg-white/5 rounded-lg p-2 lg:p-4">
-                <p className="text-white text-lg font-semibold">{post?.content && post.content}</p>
-                <img src={post.img} alt="post" className="w-full mt-3 rounded-lg" />
+                <p className="text-white text-lg font-semibold">{post?.text && post.text}</p>
+                {
+                    post.postPicture && <img src={post.img && post.postPicture} alt="post" className="w-full mt-3 rounded-lg" />
+                }
             </div>
             {/* like comment and share button */}
             <div className="flex items-center justify-between mt-3">

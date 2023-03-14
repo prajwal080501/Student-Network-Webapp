@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import PostCard from './PostCard'
 import { Posts } from '../data'
 
-const Feed = ({ modal, handleModal }) => {
+const Feed = ({ modal, handleModal, posts }) => {
 
     const refresh = () => {
         window.location.reload()
@@ -28,8 +28,8 @@ const Feed = ({ modal, handleModal }) => {
             </motion.div>
             <div className="flex flex-col pb-5 space-y-5 w-[95%] mx-auto mt-5">
                 {
-                    Posts.map(post => (
-                        <PostCard key={post.id} post={post} />
+                    posts?.map(post => (
+                        <PostCard key={post._id} post={post} />
                     ))
                 }
             </div>
